@@ -10,21 +10,22 @@ public class Task3 {
         int index = 0;
         int indexMax = 0;
         int[][] matrix = new int[12][8];
-        for (int i = 0; i < 12; i++) {
-            for (int j = 0; j < 8; j++) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
                 matrix[i][j] = random.nextInt(51);
             }
         }
-        for (int i = 0; i < 12; i++) {
-            int sum =0;
-            for (int j = 0; j < 8; j++) {
-                sum+=matrix[i][j];
+        for (int i = 0; i < matrix.length; i++) {
+            int sum = 0;
+            for (int j = 0; j < matrix[i].length; j++) {
+                sum += matrix[i][j];
                 index = i;
-                if(sum > max) {
-                    max = sum;
-                    indexMax = index;
-                }
+
                 System.out.print(matrix[i][j] + " ");
+            }
+            if (sum > max) {
+                max = sum;
+                indexMax = i;
             }
             System.out.println("Cумма: " + sum + ", ряд: " + index);
         }
