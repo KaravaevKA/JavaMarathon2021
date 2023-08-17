@@ -18,24 +18,15 @@ info() -  выводит сообщение в зависимости от ко�
 public class Task2 {
     public static void main(String[] args) {
         Random random = new Random();
-
-        /*
-        При попытке создания объекта класса Player с передачей ему значения стамины сгенерированного random.NextInt(90,101)
-        (Пробовал создать переменную с рандомным значением, и напрямую передавал рандом в "игроков"), появляется ошибка
-        java: no suitable method found for nextInt(int,int)
-    method java.util.Random.nextInt() is not applicable
-      (actual and formal argument lists differ in length)
-    method java.util.Random.nextInt(int) is not applicable
-      (actual and formal argument lists differ in length)
-         */
+        int playerStamina = random.nextInt(100-90) + 90;
 
 
-        Player player1 = new Player(90);
-        Player player2 = new Player(95);
-        Player player3 = new Player(100);
-        Player player4 = new Player(91);
-        Player player5 = new Player(93);
-        Player player6 = new Player(97);
+        Player player1 = new Player(playerStamina);
+        Player player2 = new Player(playerStamina);
+        Player player3 = new Player(playerStamina);
+        Player player4 = new Player(playerStamina);
+        Player player5 = new Player(playerStamina);
+        Player player6 = new Player(playerStamina);
         Player.info();
     }
 }

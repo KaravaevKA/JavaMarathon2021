@@ -24,18 +24,19 @@ public class Teacher {
     }
 
     public void evaluate(Student student) {
-
-        int mark = ThreadLocalRandom.current().nextInt(2, 6);
-
+        Random random = new Random();
+        int mark = random.nextInt(6-2) + 2;
+        String markLiteral = "";
         if (mark == 5) {
-            System.out.println("Преподаватель " + getName() + " оценил студента с именем " + student.getName() + " по предмету " + getSubject() + " на оценку отлично");
+            markLiteral = "Отлично";
         } else if (mark == 4) {
-            System.out.println("Преподаватель " + getName() + " оценил студента с именем " + student.getName() + " по предмету " + getSubject() + " на оценку хорошо");
+            markLiteral = "Хорошо";
         } else if (mark == 3) {
-            System.out.println("Преподаватель " + getName() + " оценил студента с именем " + student.getName() + " по предмету " + getSubject() + " на оценку удовлетворительно");
+            markLiteral = "Удовлетворительно";
         } else if (mark == 2) {
-            System.out.println("Преподаватель " + getName() + " оценил студента с именем " + student.getName() + " по предмету " + getSubject() + " на оценку неудовлетворительно");
+            markLiteral = "Неудовлетворительно";
         }
+        System.out.println("Преподаватель " + getName() + " оценил студента с именем " + student.getName() + " по предмету " + getSubject() + " на оценку " + markLiteral);
     }
 
     public Teacher(String name, String subject) {

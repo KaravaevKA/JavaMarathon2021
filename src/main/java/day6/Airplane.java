@@ -31,13 +31,12 @@ public class Airplane {
         return fuel;
     }
 
-    public void info(){
+    public void info() {
         System.out.println("Изготовитель: " + manufacturer + ", год выпуска: " + year + ", длина: " + length + ", вес: " + weight + ", количество топлива в баке: " + fuel);
     }
 
-    public int fillUp(int n){
-       setFuel(getFuel() + n);
-       return fuel;
+    public void fillUp(int n) {
+        fuel += n;
     }
 
     public Airplane(String manufacturer, int year, int length, int weight) {
