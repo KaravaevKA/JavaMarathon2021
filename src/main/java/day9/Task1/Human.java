@@ -12,6 +12,7 @@ public class Human {
     }
 
     public void printInfo(){
+
         System.out.println("Этот человек с именем " + name);
     }
 }

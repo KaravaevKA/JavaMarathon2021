@@ -25,8 +25,17 @@ public class Task2 {
         Player player2 = new Player(playerStamina);
         Player player3 = new Player(playerStamina);
         Player player4 = new Player(playerStamina);
+        Player.info();
         Player player5 = new Player(playerStamina);
         Player player6 = new Player(playerStamina);
         Player.info();
+        Player player7 = new Player(playerStamina);
+        Player.info();
+
+        for (int i = 0; i < playerStamina; i++) {
+            player1.run();
+        }
+        Player.info();
+
     }
 }

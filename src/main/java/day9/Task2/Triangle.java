@@ -8,7 +8,7 @@ public class Triangle extends Figure{
 
     @Override
     public double area() {
-        double halfPerimeter = (firstSideLength + secondSideLength +thirdSideLength)/2.0;
+        double halfPerimeter = this.perimeter()/2.0;
         return Math.sqrt(halfPerimeter*(halfPerimeter-firstSideLength)*(halfPerimeter-secondSideLength)*(halfPerimeter-thirdSideLength));
     }
 
