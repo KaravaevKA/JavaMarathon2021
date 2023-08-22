@@ -8,10 +8,6 @@ public class Warrior extends Hero {
         physAtt = 30;
     }
 
-    @Override
-    public void physicalAttack(Hero h) {
-        super.physicalAttack(h);
-    }
 
     @Override
     public String toString() {

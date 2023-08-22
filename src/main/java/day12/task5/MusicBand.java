@@ -1,6 +1,5 @@
 package day12.task5;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MusicBand {
@@ -8,23 +7,9 @@ public class MusicBand {
     private int year;
     private List<MusicArtist> members;
 
-    public void deleteMembers(List<String> selectedMembers, List<String> members) {
-        for (int i = 0; i < members.size(); i++) {
-            for (int j = 0; j < selectedMembers.size(); j++) {
-                if(members.get(i).equals(selectedMembers.get(j))){
-                    members.remove(i);
-                }
-            }
-        }
-    }
-
-    public static void transferMembers(MusicBand a, MusicBand b, List<MusicArtist> members){
-        List<MusicArtist> transferedMembers = new ArrayList<>();
-        for (MusicArtist member: members) {
-            transferedMembers.add(member);
-        }
+    public static void transferMembers(MusicBand a, MusicBand b){
+        b.members.addAll(a.members);
         a.members.clear();
-        b.addMembersToGroup(transferedMembers);
     }
 
     public void setMembers(List<MusicArtist> members) {
@@ -32,7 +17,7 @@ public class MusicBand {
     }
 
     public void addMembersToGroup(List<MusicArtist> members){
-        this.setMembers(members);
+        this.members.addAll(members);
     }
 
     public List<MusicArtist> getMembers() {
@@ -45,9 +30,10 @@ public class MusicBand {
         }
     }
 
-    public MusicBand(String name, int year) {
+    public MusicBand(String name, int year ) {
         this.name = name;
         this.year = year;
+
     }
 
     public String getName() {

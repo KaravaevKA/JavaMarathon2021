@@ -3,7 +3,7 @@ package day11.task2;
 import day11.task2.Interfaces.Healer;
 import day11.task2.Interfaces.MagicAttack;
 
-public class Shaman extends Warrior implements MagicAttack, Healer {
+public class Shaman extends Hero implements MagicAttack, Healer {
 
     public Shaman() {
         physAtt = 10;
@@ -27,11 +27,6 @@ public class Shaman extends Warrior implements MagicAttack, Healer {
         } else {
             h.health += 30;
         }
-    }
-
-    @Override
-    public void physicalAttack(Hero h) {
-        super.physicalAttack(h);
     }
 
     @Override

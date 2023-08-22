@@ -30,15 +30,13 @@ public class User {
         subscriptions.add(user);
         if (this.isSubscribed(user) && user.isSubscribed(this)){
             friendship(user);
+            subscriptions.remove(user);
         }
 
     }
 
     public boolean isSubscribed(User user){
-        if(this.subscriptions.contains(user)){
-            return true;
-        }else
-            return false;
+        return subscriptions.contains(user);
     }
 
     public boolean isFriend(User user){

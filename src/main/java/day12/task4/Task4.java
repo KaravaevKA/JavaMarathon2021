@@ -5,12 +5,12 @@ import java.util.List;
 
 public class Task4 {
     public static void main(String[] args) {
-            MusicBand musicBand = new MusicBand("AC/DC",1970);
         List<String> list = new ArrayList<>();
         list.add("Brian Johnson");
         list.add("Angus Young");
         list.add("Malcolm Young");
         list.add("Chris Slade");
+            MusicBand musicBand = new MusicBand("AC/DC",1970);
         musicBand.addMembersToGroup(list);
         System.out.println(musicBand);
 //        List<String> exclude = new ArrayList<>();
@@ -20,7 +20,7 @@ public class Task4 {
 //        System.out.println(musicBand);
         MusicBand musicBand1 = new MusicBand("Metallica", 1981);
         System.out.println(musicBand1);
-        MusicBand.transferMembers(musicBand,musicBand1,list);
+        MusicBand.transferMembers(musicBand,musicBand1);
         System.out.println(musicBand);
         System.out.println(musicBand1);
         musicBand1.printMembers();

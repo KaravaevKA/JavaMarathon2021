@@ -15,7 +15,7 @@ public class MessageDatabase {
     }
     public static void showDialog(User u1, User u2){
         for (Message message: messages) {
-            if (message.getReceiver().equals(u2) && message.getSender().equals(u1)){
+            if ((message.getReceiver().equals(u2) && message.getSender().equals(u1))&&(message.getReceiver().equals(u1) && message.getSender().equals(u2))){
                 System.out.println(message);
             }
         }

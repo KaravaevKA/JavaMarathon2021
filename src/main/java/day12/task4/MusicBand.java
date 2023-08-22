@@ -9,23 +9,9 @@ public class MusicBand {
     private int year;
     private List<String> members;
 
-    public void deleteMembers(List<String> selectedMembers, List<String> members) {
-        for (int i = 0; i < members.size(); i++) {
-            for (int j = 0; j < selectedMembers.size(); j++) {
-                if(members.get(i).equals(selectedMembers.get(j))){
-                    members.remove(i);
-                }
-            }
-        }
-    }
-
-    public static void transferMembers(MusicBand a, MusicBand b, List<String> members){
-        List<String> transferedMembers = new ArrayList<>();
-        for (String member: members) {
-            transferedMembers.add(member);
-        }
+    public static void transferMembers(MusicBand a, MusicBand b){
+        b.members.addAll(a.members);
         a.members.clear();
-        b.addMembersToGroup(transferedMembers);
     }
 
     public void setMembers(List<String> members) {
@@ -33,7 +19,7 @@ public class MusicBand {
     }
 
     public void addMembersToGroup(List<String> members){
-        this.setMembers(members);
+        this.members.addAll(members);
     }
 
     public List<String> getMembers() {
@@ -46,9 +32,10 @@ public class MusicBand {
         }
     }
 
-    public MusicBand(String name, int year) {
+    public MusicBand(String name, int year ) {
         this.name = name;
         this.year = year;
+
     }
 
     public String getName() {

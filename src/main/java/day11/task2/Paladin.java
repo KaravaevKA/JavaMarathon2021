@@ -10,10 +10,7 @@ public class Paladin extends Hero implements Healer {
     }
 
 
-    @Override
-    public void physicalAttack(Hero h) {
-        super.physicalAttack(h);
-    }
+
 
     @Override
     public void healHimself() {

@@ -14,7 +14,7 @@ public class Task5 {
         musicBand.addMembersToGroup(musicArtists);
         System.out.println(musicBand);
         System.out.println(musicBand1);
-        MusicBand.transferMembers(musicBand,musicBand1,musicArtists);
+        MusicBand.transferMembers(musicBand,musicBand1);
         System.out.println(musicBand);
         System.out.println(musicBand1);
     }
