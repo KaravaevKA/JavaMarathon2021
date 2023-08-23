@@ -3,7 +3,7 @@ package day11.task2;
 import day11.task2.Interfaces.Healer;
 import day11.task2.Interfaces.MagicAttack;
 
-public class Magician extends Warrior implements MagicAttack {
+public class Magician extends Hero implements MagicAttack {
 
     public Magician() {
         physAtt = 5;

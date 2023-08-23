@@ -10,7 +10,7 @@ public class Task4 {
         list.add("Angus Young");
         list.add("Malcolm Young");
         list.add("Chris Slade");
-            MusicBand musicBand = new MusicBand("AC/DC",1970);
+            MusicBand musicBand = new MusicBand("AC/DC",1970,list);
         musicBand.addMembersToGroup(list);
         System.out.println(musicBand);
 //        List<String> exclude = new ArrayList<>();
@@ -18,7 +18,9 @@ public class Task4 {
 //        exclude.add("Chris Slade");
 //        musicBand.deleteMembers(exclude,list);
 //        System.out.println(musicBand);
-        MusicBand musicBand1 = new MusicBand("Metallica", 1981);
+        List<String>metallicaBand = new ArrayList<>();
+
+        MusicBand musicBand1 = new MusicBand("Metallica", 1981,metallicaBand);
         System.out.println(musicBand1);
         MusicBand.transferMembers(musicBand,musicBand1);
         System.out.println(musicBand);

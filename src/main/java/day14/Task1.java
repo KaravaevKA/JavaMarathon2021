@@ -21,7 +21,7 @@ public class Task1 {
             String[] numbersSring = line.split(" ");
             int counter = 0;
             if (numbersSring.length != 10) {
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("Некорректный входной файл");
             } else {
                 for (int i = 0; i < numbersSring.length; i++) {
                     sum += Integer.parseInt(numbersSring[i]);
@@ -31,11 +31,10 @@ public class Task1 {
             scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+
         }
-        catch (IllegalArgumentException e){
-            System.out.println("Некорректный входной файл");
 
     }
-
-}
 }

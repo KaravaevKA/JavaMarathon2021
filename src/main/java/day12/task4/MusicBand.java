@@ -32,9 +32,10 @@ public class MusicBand {
         }
     }
 
-    public MusicBand(String name, int year ) {
+    public MusicBand(String name, int year, List<String> members ) {
         this.name = name;
         this.year = year;
+        this.members = members;
 
     }
 
