@@ -19,7 +19,6 @@ public class Task1 {
             int sum = 0;
             String line = scanner.nextLine();
             String[] numbersSring = line.split(" ");
-            int counter = 0;
             if (numbersSring.length != 10) {
                 throw new IllegalArgumentException("Некорректный входной файл");
             } else {
