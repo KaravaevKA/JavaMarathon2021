@@ -65,6 +65,7 @@ public class Task2 {
             }
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
+
         }
     }
 }

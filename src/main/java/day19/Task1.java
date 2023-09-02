@@ -23,13 +23,15 @@ public class Task1 {
             }
             int count = 0;
             for (Map.Entry<Integer,String> entry : text.entrySet()) {
-                    if (entry.getValue().equals("души")){
+                    if (entry.getValue().equals("мертвые")){
                         count++;
                     }
             }
             //Чичиков - 601
             //душа - 16
             //души - 75
+            //мертвые - 43
+
 
             System.out.println(count);
         } catch (FileNotFoundException e) {
