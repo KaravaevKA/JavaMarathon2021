@@ -41,12 +41,13 @@ public class Task2 {
                 int temp = x2;
                 x2 = x1;
                 x1 = temp;
-            } else if (y1 > y2) {
+            }
+            if (y1 > y2) {
                 int temp = y2;
                 y2 = y1;
                 y1 = temp;
             }
-            //В условии выше пытался обработать случай, когда начальные координаты больше конечных, но пока что не проходит
+
             int counter = 0;
             Map<Integer, Point> locatedCars = new HashMap<>();
             for (Map.Entry<Integer, Point> car : map.entrySet()) {

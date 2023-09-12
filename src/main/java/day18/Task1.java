@@ -6,9 +6,8 @@ public class Task1 {
         System.out.println(recursionSum(numbers,numbers.length-1));
     }
     public static int recursionSum(int[] array, int num){
-        int sum = 0;
         if (num == 0){
-            return array[num] + sum;
+            return array[num];
         }
         return array[num] + recursionSum(array,num-1);
     }

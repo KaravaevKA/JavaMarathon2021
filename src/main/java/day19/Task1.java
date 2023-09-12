@@ -2,9 +2,7 @@ package day19;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author Neil Alishev
@@ -15,25 +13,32 @@ public class Task1 {
         try {
             Scanner scanner = new Scanner(file);
             scanner.useDelimiter("[.,:;()?!\"\\s–]+");
-            int n = 0;
-            HashMap<Integer,String> text = new HashMap<>();
-            while (scanner.hasNext()){
-                text.put(n, scanner.next());
-                n++;
+            List<String> text = new ArrayList<>();
+            while (scanner.hasNext()) {
+                text.add(scanner.next());
             }
-            int count = 0;
-            for (Map.Entry<Integer,String> entry : text.entrySet()) {
-                    if (entry.getValue().equals("мертвые")){
-                        count++;
-                    }
+            Set<String> words = new HashSet<>();
+            words.addAll(text);
+            Map<Integer, String> map = new HashMap<>();
+            List<Integer> list = new ArrayList<>();
+
+            int counter = 1;
+            for (String word : words) {
+                String buffer = word;
+                for (int i = 0; i < text.size(); i++) {
+                    if (text.get(i).equals(buffer))
+                        counter++;
+                }
+                list.add(counter);
+                map.put(counter, word);
+                counter = 1;
             }
-            //Чичиков - 601
-            //душа - 16
-            //души - 75
-            //мертвые - 43
+            Collections.sort(list);
+            Collections.reverse(list);
+            for (int i = 0; i < 100; i++) {
+                System.out.println(map.get(list.get(i)) + " : " + list.get(i));
+            }
 
-
-            System.out.println(count);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         }
